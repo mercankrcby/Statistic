@@ -1,0 +1,1405 @@
+---
+title: 'Statistic'
+author: "Mercan Karacabey"
+date: "05 01 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Libraries
+```{r cars}
+library(tidyverse)
+library(dplyr)
+library("readxl")
+```
+
+## Excel Operations
+```{r pressure, echo=FALSE}
+setwd("//Users//macboookair//Downloads//CM-RawData")
+excel_data <- read_excel("YCMR-XXX 14.08.2017 G3HL Deneme 2.xlsx",sheet="Record_CMC")
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_1 <- excel_data %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew <- excel_data_1[,c(4:6)]
+
+dfNew_1_factor <- dfNew[3,]
+dfNew_2_factor <- dfNew[12,]
+dfNew_3_factor <- dfNew[15,]
+dfNew_4_factor <- dfNew[19,]
+dfNew_5_factor <- dfNew[28,]
+dfNew_ME_factor <- dfNew[33,]
+
+dfNew_1_factor
+dfNew_2_factor
+dfNew_3_factor
+dfNew_4_factor
+dfNew_5_factor
+dfNew_ME_factor
+#########################################################
+
+excel_data_2 <- read_excel("YCMR-XXX 14.08.2017 G3HL Deneme 7.xlsx",sheet="Record_CMC")
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_2 <- excel_data_2 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_2 <- excel_data_2[,c(4:6)]
+
+dfNew_1_factor_Excel_2 <- dfNew_Excel_2[3,]
+dfNew_2_factor_Excel_2 <- dfNew_Excel_2[12,]
+dfNew_3_factor_Excel_2 <- dfNew_Excel_2[15,]
+dfNew_4_factor_Excel_2 <- dfNew_Excel_2[19,]
+dfNew_5_factor_Excel_2 <- dfNew_Excel_2[28,]
+dfNew_ME_factor_Excel_2 <- dfNew_Excel_2[33,]
+
+dfNew_1_factor_Excel_2
+dfNew_2_factor_Excel_2
+dfNew_3_factor_Excel_2
+dfNew_4_factor_Excel_2
+dfNew_5_factor_Excel_2
+dfNew_ME_factor_Excel_2
+#########################################################
+
+excel_data_3 <- read_excel("YCMR-XXX 14.08.2017 G3HL Deneme 14.xlsx",sheet="Record_CMC")
+print(excel_data)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_3 <- excel_data_3 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_3 <- excel_data_3[,c(4:6)]
+
+dfNew_1_factor_Excel_3 <- dfNew_Excel_3[3,]
+dfNew_2_factor_Excel_3 <- dfNew_Excel_3[12,]
+dfNew_3_factor_Excel_3 <- dfNew_Excel_3[15,]
+dfNew_4_factor_Excel_3 <- dfNew_Excel_3[19,]
+dfNew_5_factor_Excel_3 <- dfNew_Excel_3[28,]
+dfNew_ME_factor_Excel_3 <- dfNew_Excel_3[33,]
+
+dfNew_1_factor_Excel_3
+dfNew_2_factor_Excel_3
+dfNew_3_factor_Excel_3
+dfNew_4_factor_Excel_3
+dfNew_5_factor_Excel_3
+dfNew_ME_factor_Excel_3
+#########################################################
+
+excel_data_4 <- read_excel("YCMR-XXX 14.08.2017 G3HL Deneme 17.xlsx",sheet="Record_CMC")
+print(excel_data_4)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_4 <- excel_data_4 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_4 <- excel_data_4[,c(4:6)]
+
+dfNew_1_factor_Excel_4 <- dfNew_Excel_4[3,]
+dfNew_2_factor_Excel_4 <- dfNew_Excel_4[12,]
+dfNew_3_factor_Excel_4 <- dfNew_Excel_4[15,]
+dfNew_4_factor_Excel_4 <- dfNew_Excel_4[19,]
+dfNew_5_factor_Excel_4 <- dfNew_Excel_4[28,]
+dfNew_ME_factor_Excel_4 <- dfNew_Excel_4[33,]
+
+dfNew_1_factor_Excel_4
+dfNew_2_factor_Excel_4
+dfNew_3_factor_Excel_4
+dfNew_4_factor_Excel_4
+dfNew_5_factor_Excel_4
+dfNew_ME_factor_Excel_4
+#########################################################
+
+excel_data_5 <- read_excel("YCMR-XXX 14.08.2017 G3HL Deneme 20.xlsx",sheet="Record_CMC")
+print(excel_data_5)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_5 <- excel_data_5 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_5 <- excel_data_5[,c(4:6)]
+
+dfNew_1_factor_Excel_5 <- dfNew_Excel_5[3,]
+dfNew_2_factor_Excel_5 <- dfNew_Excel_5[12,]
+dfNew_3_factor_Excel_5 <- dfNew_Excel_5[15,]
+dfNew_4_factor_Excel_5 <- dfNew_Excel_5[19,]
+dfNew_5_factor_Excel_5 <- dfNew_Excel_5[28,]
+dfNew_ME_factor_Excel_5 <- dfNew_Excel_5[33,]
+
+dfNew_1_factor_Excel_5
+dfNew_2_factor_Excel_5
+dfNew_3_factor_Excel_5
+dfNew_4_factor_Excel_5
+dfNew_5_factor_Excel_5
+dfNew_ME_factor_Excel_5
+
+#########################################################
+
+excel_data_6 <- read_excel("YCMR-XXX 14.08.2017 G3HL Deneme 21.xlsx",sheet="Record_CMC")
+print(excel_data_6)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_6 <- excel_data_6 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_6 <- excel_data_6[,c(4:6)]
+
+dfNew_1_factor_Excel_6 <- dfNew_Excel_6[3,]
+dfNew_2_factor_Excel_6 <- dfNew_Excel_6[12,]
+dfNew_3_factor_Excel_6 <- dfNew_Excel_6[15,]
+dfNew_4_factor_Excel_6 <- dfNew_Excel_6[19,]
+dfNew_5_factor_Excel_6 <- dfNew_Excel_6[28,]
+dfNew_ME_factor_Excel_6 <- dfNew_Excel_6[33,]
+
+dfNew_1_factor_Excel_6
+dfNew_2_factor_Excel_6
+dfNew_3_factor_Excel_6
+dfNew_4_factor_Excel_6
+dfNew_5_factor_Excel_6
+dfNew_ME_factor_Excel_6
+#########################################################
+
+excel_data_7 <- read_excel("YCMR-XXX 17.08.2017 G3HL Deneme 57.xlsx",sheet="Record_CMC")
+print(excel_data_7)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_7 <- excel_data_7 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_7 <- excel_data_7[,c(4:6)]
+
+dfNew_1_factor_Excel_7 <- dfNew_Excel_7[3,]
+dfNew_2_factor_Excel_7 <- dfNew_Excel_7[12,]
+dfNew_3_factor_Excel_7 <- dfNew_Excel_7[15,]
+dfNew_4_factor_Excel_7 <- dfNew_Excel_7[19,]
+dfNew_5_factor_Excel_7 <- dfNew_Excel_7[28,]
+dfNew_ME_factor_Excel_7 <- dfNew_Excel_7[33,]
+
+dfNew_1_factor_Excel_7
+dfNew_2_factor_Excel_7
+dfNew_3_factor_Excel_7
+dfNew_4_factor_Excel_7
+dfNew_5_factor_Excel_7
+dfNew_ME_factor_Excel_7
+#########################################################
+
+excel_data_8 <- read_excel("YCMR-XXX 17.08.2017 G3HL Deneme 59.xlsx",sheet="Record_CMC")
+print(excel_data_8)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_8 <- excel_data_8 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_8 <- excel_data_8[,c(4:6)]
+
+dfNew_1_factor_Excel_8 <- dfNew_Excel_8[3,]
+dfNew_2_factor_Excel_8 <- dfNew_Excel_8[12,]
+dfNew_3_factor_Excel_8 <- dfNew_Excel_8[15,]
+dfNew_4_factor_Excel_8 <- dfNew_Excel_8[19,]
+dfNew_5_factor_Excel_8 <- dfNew_Excel_8[28,]
+dfNew_ME_factor_Excel_8 <- dfNew_Excel_8[33,]
+
+dfNew_1_factor_Excel_8
+dfNew_2_factor_Excel_8
+dfNew_3_factor_Excel_8
+dfNew_4_factor_Excel_8
+dfNew_5_factor_Excel_8
+dfNew_ME_factor_Excel_8
+#########################################################
+
+excel_data_9 <- read_excel("YCMR-XXX 17.08.2017 G3HL Deneme 60.xlsx",sheet="Record_CMC")
+print(excel_data_9)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_9 <- excel_data_9 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_9 <- excel_data_9[,c(4:6)]
+
+dfNew_1_factor_Excel_9 <- dfNew_Excel_9[3,]
+dfNew_2_factor_Excel_9 <- dfNew_Excel_9[12,]
+dfNew_3_factor_Excel_9 <- dfNew_Excel_9[15,]
+dfNew_4_factor_Excel_9 <- dfNew_Excel_9[19,]
+dfNew_5_factor_Excel_9 <- dfNew_Excel_9[28,]
+dfNew_ME_factor_Excel_9 <- dfNew_Excel_9[33,]
+
+dfNew_1_factor_Excel_9
+dfNew_2_factor_Excel_9
+dfNew_3_factor_Excel_9
+dfNew_4_factor_Excel_9
+dfNew_5_factor_Excel_9
+dfNew_ME_factor_Excel_9
+
+#########################################################
+
+excel_data_10 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 84.xlsx",sheet="Record_CMC")
+print(excel_data_10)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_10 <- excel_data_10 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_10 <- excel_data_10[,c(4:6)]
+
+dfNew_1_factor_Excel_10 <- dfNew_Excel_10[3,]
+dfNew_2_factor_Excel_10 <- dfNew_Excel_10[12,]
+dfNew_3_factor_Excel_10 <- dfNew_Excel_10[15,]
+dfNew_4_factor_Excel_10 <- dfNew_Excel_10[19,]
+dfNew_5_factor_Excel_10 <- dfNew_Excel_10[28,]
+dfNew_ME_factor_Excel_10 <- dfNew_Excel_10[33,]
+
+dfNew_1_factor_Excel_10
+dfNew_2_factor_Excel_10
+dfNew_3_factor_Excel_10
+dfNew_4_factor_Excel_10
+dfNew_5_factor_Excel_10
+dfNew_ME_factor_Excel_10
+
+#########################################################
+
+excel_data_11 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 87.xlsx",sheet="Record_CMC")
+print(excel_data_11)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_11 <- excel_data_11 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_11 <- excel_data_11[,c(4:6)]
+
+dfNew_1_factor_Excel_11 <- dfNew_Excel_11[3,]
+dfNew_2_factor_Excel_11 <- dfNew_Excel_11[12,]
+dfNew_3_factor_Excel_11 <- dfNew_Excel_11[15,]
+dfNew_4_factor_Excel_11 <- dfNew_Excel_11[19,]
+dfNew_5_factor_Excel_11 <- dfNew_Excel_11[28,]
+dfNew_ME_factor_Excel_11 <- dfNew_Excel_11[33,]
+
+dfNew_1_factor_Excel_11
+dfNew_2_factor_Excel_11
+dfNew_3_factor_Excel_11
+dfNew_4_factor_Excel_11
+dfNew_5_factor_Excel_11
+dfNew_ME_factor_Excel_11
+
+#########################################################
+
+excel_data_12 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 88.xlsx",sheet="Record_CMC")
+print(excel_data_12)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_12 <- excel_data_12 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_12 <- excel_data_12[,c(4:6)]
+
+dfNew_1_factor_Excel_12 <- dfNew_Excel_12[3,]
+dfNew_2_factor_Excel_12 <- dfNew_Excel_12[12,]
+dfNew_3_factor_Excel_12 <- dfNew_Excel_12[15,]
+dfNew_4_factor_Excel_12 <- dfNew_Excel_12[19,]
+dfNew_5_factor_Excel_12 <- dfNew_Excel_12[28,]
+dfNew_ME_factor_Excel_12 <- dfNew_Excel_12[33,]
+
+dfNew_1_factor_Excel_12
+dfNew_2_factor_Excel_12
+dfNew_3_factor_Excel_12
+dfNew_4_factor_Excel_12
+dfNew_5_factor_Excel_12
+dfNew_ME_factor_Excel_12
+
+#########################################################
+
+excel_data_13 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 89.xlsx",sheet="Record_CMC")
+print(excel_data_13)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_13 <- excel_data_13 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_13 <- excel_data_13[,c(4:6)]
+
+dfNew_1_factor_Excel_13 <- dfNew_Excel_13[3,]
+dfNew_2_factor_Excel_13 <- dfNew_Excel_13[12,]
+dfNew_3_factor_Excel_13 <- dfNew_Excel_13[15,]
+dfNew_4_factor_Excel_13 <- dfNew_Excel_13[19,]
+dfNew_5_factor_Excel_13 <- dfNew_Excel_13[28,]
+dfNew_ME_factor_Excel_13 <- dfNew_Excel_13[33,]
+
+dfNew_1_factor_Excel_13
+dfNew_2_factor_Excel_13
+dfNew_3_factor_Excel_13
+dfNew_4_factor_Excel_13
+dfNew_5_factor_Excel_13
+dfNew_ME_factor_Excel_13
+
+#########################################################
+
+excel_data_14 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 90.xlsx",sheet="Record_CMC")
+print(excel_data_14)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_14 <- excel_data_14 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_14 <- excel_data_14[,c(4:6)]
+
+dfNew_1_factor_Excel_14 <- dfNew_Excel_14[3,]
+dfNew_2_factor_Excel_14 <- dfNew_Excel_14[12,]
+dfNew_3_factor_Excel_14 <- dfNew_Excel_14[15,]
+dfNew_4_factor_Excel_14 <- dfNew_Excel_14[19,]
+dfNew_5_factor_Excel_14 <- dfNew_Excel_14[28,]
+dfNew_ME_factor_Excel_14 <- dfNew_Excel_14[33,]
+
+dfNew_1_factor_Excel_14
+dfNew_2_factor_Excel_14
+dfNew_3_factor_Excel_14
+dfNew_4_factor_Excel_14
+dfNew_5_factor_Excel_14
+dfNew_ME_factor_Excel_14
+
+#########################################################
+
+excel_data_15 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 91.xlsx",sheet="Record_CMC")
+print(excel_data_15)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_15 <- excel_data_15 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_15 <- excel_data_15[,c(4:6)]
+
+dfNew_1_factor_Excel_15 <- dfNew_Excel_15[3,]
+dfNew_2_factor_Excel_15 <- dfNew_Excel_15[12,]
+dfNew_3_factor_Excel_15 <- dfNew_Excel_15[15,]
+dfNew_4_factor_Excel_15 <- dfNew_Excel_15[19,]
+dfNew_5_factor_Excel_15 <- dfNew_Excel_15[28,]
+dfNew_ME_factor_Excel_15 <- dfNew_Excel_15[33,]
+
+dfNew_1_factor_Excel_15
+dfNew_2_factor_Excel_15
+dfNew_3_factor_Excel_15
+dfNew_4_factor_Excel_15
+dfNew_5_factor_Excel_15
+dfNew_ME_factor_Excel_15
+
+#########################################################
+
+excel_data_16 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 92.xlsx",sheet="Record_CMC")
+print(excel_data_16)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_16 <- excel_data_16 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_16 <- excel_data_16[,c(4:6)]
+
+dfNew_1_factor_Excel_16 <- dfNew_Excel_16[3,]
+dfNew_2_factor_Excel_16 <- dfNew_Excel_16[12,]
+dfNew_3_factor_Excel_16 <- dfNew_Excel_16[15,]
+dfNew_4_factor_Excel_16 <- dfNew_Excel_16[19,]
+dfNew_5_factor_Excel_16 <- dfNew_Excel_16[28,]
+dfNew_ME_factor_Excel_16 <- dfNew_Excel_16[33,]
+
+dfNew_1_factor_Excel_16
+dfNew_2_factor_Excel_16
+dfNew_3_factor_Excel_16
+dfNew_4_factor_Excel_16
+dfNew_5_factor_Excel_16
+dfNew_ME_factor_Excel_16
+#########################################################
+
+excel_data_17 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 95.xlsx",sheet="Record_CMC")
+print(excel_data_17)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_17 <- excel_data_17 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_17 <- excel_data_17[,c(4:6)]
+
+dfNew_1_factor_Excel_17 <- dfNew_Excel_17[3,]
+dfNew_2_factor_Excel_17 <- dfNew_Excel_17[12,]
+dfNew_3_factor_Excel_17 <- dfNew_Excel_17[15,]
+dfNew_4_factor_Excel_17 <- dfNew_Excel_17[19,]
+dfNew_5_factor_Excel_17 <- dfNew_Excel_17[28,]
+dfNew_ME_factor_Excel_17 <- dfNew_Excel_17[33,]
+
+dfNew_1_factor_Excel_17
+dfNew_2_factor_Excel_17
+dfNew_3_factor_Excel_17
+dfNew_4_factor_Excel_17
+dfNew_5_factor_Excel_17
+dfNew_ME_factor_Excel_17
+#########################################################
+
+excel_data_18 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 97.xlsx",sheet="Record_CMC")
+print(excel_data_18)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_18 <- excel_data_18 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_18 <- excel_data_18[,c(4:6)]
+
+dfNew_1_factor_Excel_18 <- dfNew_Excel_18[3,]
+dfNew_2_factor_Excel_18 <- dfNew_Excel_18[12,]
+dfNew_3_factor_Excel_18 <- dfNew_Excel_18[15,]
+dfNew_4_factor_Excel_18 <- dfNew_Excel_18[19,]
+dfNew_5_factor_Excel_18 <- dfNew_Excel_18[28,]
+dfNew_ME_factor_Excel_18 <- dfNew_Excel_18[33,]
+
+dfNew_1_factor_Excel_18
+dfNew_2_factor_Excel_18
+dfNew_3_factor_Excel_18
+dfNew_4_factor_Excel_18
+dfNew_5_factor_Excel_18
+dfNew_ME_factor_Excel_18
+#########################################################
+
+excel_data_19 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 101.xlsx",sheet="Record_CMC")
+print(excel_data_19)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_19 <- excel_data_19 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_19 <- excel_data_19[,c(4:6)]
+
+dfNew_1_factor_Excel_19 <- dfNew_Excel_19[3,]
+dfNew_2_factor_Excel_19 <- dfNew_Excel_19[12,]
+dfNew_3_factor_Excel_19 <- dfNew_Excel_19[15,]
+dfNew_4_factor_Excel_19 <- dfNew_Excel_19[19,]
+dfNew_5_factor_Excel_19 <- dfNew_Excel_19[28,]
+dfNew_ME_factor_Excel_19 <- dfNew_Excel_19[33,]
+
+dfNew_1_factor_Excel_19
+dfNew_2_factor_Excel_19
+dfNew_3_factor_Excel_19
+dfNew_4_factor_Excel_19
+dfNew_5_factor_Excel_19
+dfNew_ME_factor_Excel_19
+#########################################################
+
+excel_data_20 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 105.xlsx",sheet="Record_CMC")
+print(excel_data_20)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_20 <- excel_data_20 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_20 <- excel_data_20[,c(4:6)]
+
+dfNew_1_factor_Excel_20 <- dfNew_Excel_20[3,]
+dfNew_2_factor_Excel_20 <- dfNew_Excel_20[12,]
+dfNew_3_factor_Excel_20 <- dfNew_Excel_20[15,]
+dfNew_4_factor_Excel_20 <- dfNew_Excel_20[19,]
+dfNew_5_factor_Excel_20 <- dfNew_Excel_20[28,]
+dfNew_ME_factor_Excel_20 <- dfNew_Excel_20[33,]
+
+dfNew_1_factor_Excel_20
+dfNew_2_factor_Excel_20
+dfNew_3_factor_Excel_20
+dfNew_4_factor_Excel_20
+dfNew_5_factor_Excel_20
+dfNew_ME_factor_Excel_20
+#########################################################
+
+excel_data_21 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 106.xlsx",sheet="Record_CMC")
+print(excel_data_21)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_21 <- excel_data_21 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_21 <- excel_data_21[,c(4:6)]
+
+dfNew_1_factor_Excel_21 <- dfNew_Excel_21[3,]
+dfNew_2_factor_Excel_21 <- dfNew_Excel_21[12,]
+dfNew_3_factor_Excel_21 <- dfNew_Excel_21[15,]
+dfNew_4_factor_Excel_21 <- dfNew_Excel_21[19,]
+dfNew_5_factor_Excel_21 <- dfNew_Excel_21[28,]
+dfNew_ME_factor_Excel_21 <- dfNew_Excel_21[33,]
+
+dfNew_1_factor_Excel_21
+dfNew_2_factor_Excel_21
+dfNew_3_factor_Excel_21
+dfNew_4_factor_Excel_21
+dfNew_5_factor_Excel_21
+dfNew_ME_factor_Excel_21
+
+#########################################################
+
+excel_data_22 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 111.xlsx",sheet="Record_CMC")
+print(excel_data_22)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_22 <- excel_data_22 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_22 <- excel_data_22[,c(4:6)]
+
+dfNew_1_factor_Excel_22 <- dfNew_Excel_22[3,]
+dfNew_2_factor_Excel_22 <- dfNew_Excel_22[12,]
+dfNew_3_factor_Excel_22 <- dfNew_Excel_22[15,]
+dfNew_4_factor_Excel_22 <- dfNew_Excel_22[19,]
+dfNew_5_factor_Excel_22 <- dfNew_Excel_22[28,]
+dfNew_ME_factor_Excel_22 <- dfNew_Excel_22[33,]
+
+dfNew_1_factor_Excel_22
+dfNew_2_factor_Excel_22
+dfNew_3_factor_Excel_22
+dfNew_4_factor_Excel_22
+dfNew_5_factor_Excel_22
+dfNew_ME_factor_Excel_22
+
+#########################################################
+
+excel_data_23 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 113.xlsx",sheet="Record_CMC")
+print(excel_data_23)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_23 <- excel_data_23 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_23 <- excel_data_23[,c(4:6)]
+
+dfNew_1_factor_Excel_23 <- dfNew_Excel_23[3,]
+dfNew_2_factor_Excel_23 <- dfNew_Excel_23[12,]
+dfNew_3_factor_Excel_23 <- dfNew_Excel_23[15,]
+dfNew_4_factor_Excel_23 <- dfNew_Excel_23[19,]
+dfNew_5_factor_Excel_23 <- dfNew_Excel_23[28,]
+dfNew_ME_factor_Excel_23 <- dfNew_Excel_23[33,]
+
+dfNew_1_factor_Excel_23
+dfNew_2_factor_Excel_23
+dfNew_3_factor_Excel_23
+dfNew_4_factor_Excel_23
+dfNew_5_factor_Excel_23
+dfNew_ME_factor_Excel_23
+
+#########################################################
+
+excel_data_24 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 115.xlsx",sheet="Record_CMC")
+print(excel_data_24)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_24 <- excel_data_24 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_24 <- excel_data_24[,c(4:6)]
+
+dfNew_1_factor_Excel_24 <- dfNew_Excel_24[3,]
+dfNew_2_factor_Excel_24 <- dfNew_Excel_24[12,]
+dfNew_3_factor_Excel_24 <- dfNew_Excel_24[15,]
+dfNew_4_factor_Excel_24 <- dfNew_Excel_24[19,]
+dfNew_5_factor_Excel_24 <- dfNew_Excel_24[28,]
+dfNew_ME_factor_Excel_24 <- dfNew_Excel_24[33,]
+
+dfNew_1_factor_Excel_24
+dfNew_2_factor_Excel_24
+dfNew_3_factor_Excel_24
+dfNew_4_factor_Excel_24
+dfNew_5_factor_Excel_24
+dfNew_ME_factor_Excel_24
+
+#########################################################
+
+excel_data_25 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 128.xlsx",sheet="Record_CMC")
+print(excel_data_25)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_25 <- excel_data_25 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_25 <- excel_data_25[,c(4:6)]
+
+dfNew_1_factor_Excel_25 <- dfNew_Excel_25[3,]
+dfNew_2_factor_Excel_25 <- dfNew_Excel_25[12,]
+dfNew_3_factor_Excel_25 <- dfNew_Excel_25[15,]
+dfNew_4_factor_Excel_25 <- dfNew_Excel_25[19,]
+dfNew_5_factor_Excel_25 <- dfNew_Excel_25[28,]
+dfNew_ME_factor_Excel_25 <- dfNew_Excel_25[33,]
+
+dfNew_1_factor_Excel_25
+dfNew_2_factor_Excel_25
+dfNew_3_factor_Excel_25
+dfNew_4_factor_Excel_25
+dfNew_5_factor_Excel_25
+dfNew_ME_factor_Excel_25
+
+#########################################################
+
+excel_data_26 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 129.xlsx",sheet="Record_CMC")
+print(excel_data_26)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_26 <- excel_data_26 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_26 <- excel_data_26[,c(4:6)]
+
+dfNew_1_factor_Excel_26 <- dfNew_Excel_26[3,]
+dfNew_2_factor_Excel_26 <- dfNew_Excel_26[12,]
+dfNew_3_factor_Excel_26 <- dfNew_Excel_26[15,]
+dfNew_4_factor_Excel_26 <- dfNew_Excel_26[19,]
+dfNew_5_factor_Excel_26 <- dfNew_Excel_26[28,]
+dfNew_ME_factor_Excel_26 <- dfNew_Excel_26[33,]
+
+dfNew_1_factor_Excel_26
+dfNew_2_factor_Excel_26
+dfNew_3_factor_Excel_26
+dfNew_4_factor_Excel_26
+dfNew_5_factor_Excel_26
+dfNew_ME_factor_Excel_26
+
+#########################################################
+
+excel_data_27 <- read_excel("YCMR-XXX 23.08.2017 G3HL Deneme 130.xlsx",sheet="Record_CMC")
+print(excel_data_27)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_27 <- excel_data_27 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_27 <- excel_data_27[,c(4:6)]
+
+dfNew_1_factor_Excel_27 <- dfNew_Excel_27[3,]
+dfNew_2_factor_Excel_27 <- dfNew_Excel_27[12,]
+dfNew_3_factor_Excel_27 <- dfNew_Excel_27[15,]
+dfNew_4_factor_Excel_27 <- dfNew_Excel_27[19,]
+dfNew_5_factor_Excel_27 <- dfNew_Excel_27[28,]
+dfNew_ME_factor_Excel_27 <- dfNew_Excel_27[33,]
+
+dfNew_1_factor_Excel_27
+dfNew_2_factor_Excel_27
+dfNew_3_factor_Excel_27
+dfNew_4_factor_Excel_27
+dfNew_5_factor_Excel_27
+dfNew_ME_factor_Excel_27
+
+#########################################################
+
+excel_data_28 <- read_excel("YCMR-XXX Deneme 131 G3HL 08.09.2017.xlsx",sheet="Record_CMC")
+print(excel_data_28)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_28 <- excel_data_28 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_28 <- excel_data_28[,c(4:6)]
+
+dfNew_1_factor_Excel_28 <- dfNew_Excel_28[3,]
+dfNew_2_factor_Excel_28 <- dfNew_Excel_28[12,]
+dfNew_3_factor_Excel_28 <- dfNew_Excel_28[15,]
+dfNew_4_factor_Excel_28 <- dfNew_Excel_28[19,]
+dfNew_5_factor_Excel_28 <- dfNew_Excel_28[28,]
+dfNew_ME_factor_Excel_28 <- dfNew_Excel_28[33,]
+
+dfNew_1_factor_Excel_28
+dfNew_2_factor_Excel_28
+dfNew_3_factor_Excel_28
+dfNew_4_factor_Excel_28
+dfNew_5_factor_Excel_28
+dfNew_ME_factor_Excel_28
+
+#########################################################
+
+excel_data_29 <- read_excel("YCMR-XXX Deneme 132 G3HL 08.09.2017.xlsx",sheet="Record_CMC")
+print(excel_data_29)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_29 <- excel_data_29 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_29 <- excel_data_29[,c(4:6)]
+
+dfNew_1_factor_Excel_29 <- dfNew_Excel_29[3,]
+dfNew_2_factor_Excel_29 <- dfNew_Excel_29[12,]
+dfNew_3_factor_Excel_29 <- dfNew_Excel_29[15,]
+dfNew_4_factor_Excel_29 <- dfNew_Excel_29[19,]
+dfNew_5_factor_Excel_29 <- dfNew_Excel_29[28,]
+dfNew_ME_factor_Excel_29 <- dfNew_Excel_29[33,]
+
+dfNew_1_factor_Excel_29
+dfNew_2_factor_Excel_29
+dfNew_3_factor_Excel_29
+dfNew_4_factor_Excel_29
+dfNew_5_factor_Excel_29
+dfNew_ME_factor_Excel_29
+#########################################################
+
+excel_data_30 <- read_excel("YCMR-XXX Deneme 133 G3HL 08.09.2017.xlsx",sheet="Record_CMC")
+print(excel_data_30)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_30 <- excel_data_30 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_30 <- excel_data_30[,c(4:6)]
+
+dfNew_1_factor_Excel_30 <- dfNew_Excel_30[3,]
+dfNew_2_factor_Excel_30 <- dfNew_Excel_30[12,]
+dfNew_3_factor_Excel_30 <- dfNew_Excel_30[15,]
+dfNew_4_factor_Excel_30 <- dfNew_Excel_30[19,]
+dfNew_5_factor_Excel_30 <- dfNew_Excel_30[28,]
+dfNew_ME_factor_Excel_30 <- dfNew_Excel_30[33,]
+
+dfNew_1_factor_Excel_30
+dfNew_2_factor_Excel_30
+dfNew_3_factor_Excel_30
+dfNew_4_factor_Excel_30
+dfNew_5_factor_Excel_30
+dfNew_ME_factor_Excel_30
+
+#########################################################
+
+excel_data_31 <- read_excel("YCMR-XXX Deneme 153 G3HL 12.09.2017.xlsx",sheet="Record_CMC")
+print(excel_data_31)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_31 <- excel_data_31 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_31 <- excel_data_31[,c(4:6)]
+
+dfNew_1_factor_Excel_31 <- dfNew_Excel_31[3,]
+dfNew_2_factor_Excel_31 <- dfNew_Excel_31[12,]
+dfNew_3_factor_Excel_31 <- dfNew_Excel_31[15,]
+dfNew_4_factor_Excel_31 <- dfNew_Excel_31[19,]
+dfNew_5_factor_Excel_31 <- dfNew_Excel_31[28,]
+dfNew_ME_factor_Excel_31 <- dfNew_Excel_31[33,]
+
+dfNew_1_factor_Excel_31
+dfNew_2_factor_Excel_31
+dfNew_3_factor_Excel_31
+dfNew_4_factor_Excel_31
+dfNew_5_factor_Excel_31
+dfNew_ME_factor_Excel_31
+
+#########################################################
+
+excel_data_32 <- read_excel("YCMR-XXX Deneme 154 G3HL 12.09.2017.xlsx",sheet="Record_CMC")
+print(excel_data_32)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_32 <- excel_data_32 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_32 <- excel_data_32[,c(4:6)]
+
+dfNew_1_factor_Excel_32 <- dfNew_Excel_32[3,]
+dfNew_2_factor_Excel_32 <- dfNew_Excel_32[12,]
+dfNew_3_factor_Excel_32 <- dfNew_Excel_32[15,]
+dfNew_4_factor_Excel_32 <- dfNew_Excel_32[19,]
+dfNew_5_factor_Excel_32 <- dfNew_Excel_32[28,]
+dfNew_ME_factor_Excel_32 <- dfNew_Excel_32[33,]
+
+dfNew_1_factor_Excel_32
+dfNew_2_factor_Excel_32
+dfNew_3_factor_Excel_32
+dfNew_4_factor_Excel_32
+dfNew_5_factor_Excel_32
+dfNew_ME_factor_Excel_32
+#########################################################
+
+excel_data_33 <- read_excel("YCMR-XXX Deneme 155 G3HL 12.09.2017.xlsx",sheet="Record_CMC")
+print(excel_data_33)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_33 <- excel_data_33 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_33 <- excel_data_33[,c(4:6)]
+
+dfNew_1_factor_Excel_33 <- dfNew_Excel_33[3,]
+dfNew_2_factor_Excel_33 <- dfNew_Excel_33[12,]
+dfNew_3_factor_Excel_33 <- dfNew_Excel_33[15,]
+dfNew_4_factor_Excel_33 <- dfNew_Excel_33[19,]
+dfNew_5_factor_Excel_33 <- dfNew_Excel_33[28,]
+dfNew_ME_factor_Excel_33 <- dfNew_Excel_33[33,]
+
+dfNew_1_factor_Excel_33
+dfNew_2_factor_Excel_33
+dfNew_3_factor_Excel_33
+dfNew_4_factor_Excel_33
+dfNew_5_factor_Excel_33
+dfNew_ME_factor_Excel_33
+
+#########################################################
+
+excel_data_34 <- read_excel("YCMR-XXX Deneme 156 G3HL 12.09.2017.xlsx",sheet="Record_CMC")
+print(excel_data_34)
+## Kullandığımız datayı almak icin olcum yapilan yerler alinir
+excel_data_34 <- excel_data_34 %>% slice(17:51)    
+## Olcum sonucu ilgili kolonlar secilerek yeni df ye aktarilir
+dfNew_Excel_34 <- excel_data_34[,c(4:6)]
+
+dfNew_1_factor_Excel_34 <- dfNew_Excel_34[3,]
+dfNew_2_factor_Excel_34 <- dfNew_Excel_34[12,]
+dfNew_3_factor_Excel_34 <- dfNew_Excel_34[15,]
+dfNew_4_factor_Excel_34 <- dfNew_Excel_34[19,]
+dfNew_5_factor_Excel_34 <- dfNew_Excel_34[28,]
+dfNew_ME_factor_Excel_34 <- dfNew_Excel_34[33,]
+
+dfNew_1_factor_Excel_34
+dfNew_2_factor_Excel_34
+dfNew_3_factor_Excel_34
+dfNew_4_factor_Excel_34
+dfNew_5_factor_Excel_34
+dfNew_ME_factor_Excel_34
+
+```
+
+```{r pressure, echo=FALSE}
+#bind_rows(dfNew_1_factor,dfNew_1_factor_Excel_2)
+
+#nVar <- dfNew_1_factor$Record No / Kayıt No :
+## Column name - Renames  
+colnames(dfNew_1_factor)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_2)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_3)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_4)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_5)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_6)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_7)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_8)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_9)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_10)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_11)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_12)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_13)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_14)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_15)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_16)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_17)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_18)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_19)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_20)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_21)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_22)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_23)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_24)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_25)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_26)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_27)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_28)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_29)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_30)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_31)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_32)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_33)[1] <- "measure1"
+colnames(dfNew_1_factor_Excel_34)[1] <- "measure1"
+
+colnames(dfNew_2_factor)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_2)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_3)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_4)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_5)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_6)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_7)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_8)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_9)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_10)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_11)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_12)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_13)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_14)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_15)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_16)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_17)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_18)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_19)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_20)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_21)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_22)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_23)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_24)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_25)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_26)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_27)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_28)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_29)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_30)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_31)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_32)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_33)[1] <- "measure1"
+colnames(dfNew_2_factor_Excel_34)[1] <- "measure1"
+
+colnames(dfNew_3_factor)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_2)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_3)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_4)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_5)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_6)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_7)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_8)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_9)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_10)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_11)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_12)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_13)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_14)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_15)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_16)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_17)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_18)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_19)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_20)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_21)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_22)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_23)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_24)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_25)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_26)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_27)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_28)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_29)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_30)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_31)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_32)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_33)[1] <- "measure1"
+colnames(dfNew_3_factor_Excel_34)[1] <- "measure1"
+
+
+colnames(dfNew_4_factor)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_2)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_3)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_4)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_5)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_6)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_7)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_8)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_9)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_10)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_11)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_12)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_13)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_14)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_15)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_16)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_17)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_18)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_19)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_20)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_21)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_22)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_23)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_24)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_25)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_26)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_27)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_28)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_29)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_30)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_31)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_32)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_33)[1] <- "measure1"
+colnames(dfNew_4_factor_Excel_34)[1] <- "measure1"
+
+colnames(dfNew_5_factor)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_2)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_3)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_4)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_5)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_6)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_7)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_8)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_9)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_10)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_11)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_12)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_13)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_14)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_15)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_16)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_17)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_18)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_19)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_20)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_21)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_22)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_23)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_24)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_25)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_26)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_27)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_28)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_29)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_30)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_31)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_32)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_33)[1] <- "measure1"
+colnames(dfNew_5_factor_Excel_34)[1] <- "measure1"
+
+colnames(dfNew_ME_factor)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_2)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_3)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_4)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_5)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_6)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_7)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_8)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_9)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_10)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_11)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_12)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_13)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_14)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_15)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_16)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_17)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_18)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_19)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_20)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_21)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_22)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_23)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_24)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_25)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_26)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_27)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_28)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_29)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_30)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_31)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_32)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_33)[1] <- "measure1"
+colnames(dfNew_ME_factor_Excel_34)[1] <- "measure1"
+
+
+dfNew_1_factor
+dfNew_2_factor
+dfNew_3_factor
+dfNew_4_factor
+dfNew_5_factor
+dfNew_ME_factor
+
+nVar <- dfNew_1_factor$measure1
+nVar2 <- dfNew_1_factor$X__3
+nVar3 <- dfNew_1_factor$`CMC-1235`
+nVar1<- rbind(nVar,nVar2,nVar3)
+
+
+```
+
+```{r pressure, echo=FALSE}
+## Factor 1 - Aggregation
+vec1 <- c(dfNew_1_factor$measure1,dfNew_1_factor$X__3,dfNew_1_factor$`CMC-1235`,
+          dfNew_1_factor_Excel_2$measure1,dfNew_1_factor_Excel_2$X__3,dfNew_1_factor_Excel_2$`CMC-1236`,
+          dfNew_1_factor_Excel_3$measure1,dfNew_1_factor_Excel_3$X__3,dfNew_1_factor_Excel_3$`CMC-1237`,
+          dfNew_1_factor_Excel_4$measure1,dfNew_1_factor_Excel_4$X__3,dfNew_1_factor_Excel_4$`CMC-1238`,
+          dfNew_1_factor_Excel_5$measure1,dfNew_1_factor_Excel_5$X__3,dfNew_1_factor_Excel_5$`CMC-1239`,
+          dfNew_1_factor_Excel_6$measure1,dfNew_1_factor_Excel_6$X__3,dfNew_1_factor_Excel_6$`CMC-1240`,
+          dfNew_1_factor_Excel_7$measure1,dfNew_1_factor_Excel_7$X__3,dfNew_1_factor_Excel_7$`CMC-1241`,
+          dfNew_1_factor_Excel_8$measure1,dfNew_1_factor_Excel_8$X__3,dfNew_1_factor_Excel_8$`CMC-1242`,
+          dfNew_1_factor_Excel_9$measure1,dfNew_1_factor_Excel_9$X__3,dfNew_1_factor_Excel_9$`CMC-1243`,
+          dfNew_1_factor_Excel_10$measure1,dfNew_1_factor_Excel_10$X__3,dfNew_1_factor_Excel_10$`CMC-1244`,
+          dfNew_1_factor_Excel_11$measure1,dfNew_1_factor_Excel_11$X__3,dfNew_1_factor_Excel_11$`CMC-1245`,
+          dfNew_1_factor_Excel_12$measure1,dfNew_1_factor_Excel_12$X__3,dfNew_1_factor_Excel_12$`CMC-1246`,
+          dfNew_1_factor_Excel_13$measure1,dfNew_1_factor_Excel_13$X__3,dfNew_1_factor_Excel_13$`CMC-1247`,
+          dfNew_1_factor_Excel_14$measure1,dfNew_1_factor_Excel_14$X__3,dfNew_1_factor_Excel_14$`CMC-1248`,
+          dfNew_1_factor_Excel_15$measure1,dfNew_1_factor_Excel_15$X__3,dfNew_1_factor_Excel_15$`CMC-1249`,
+          dfNew_1_factor_Excel_16$measure1,dfNew_1_factor_Excel_16$X__3,dfNew_1_factor_Excel_16$`CMC-1250`,
+          dfNew_1_factor_Excel_17$measure1,dfNew_1_factor_Excel_17$X__3,dfNew_1_factor_Excel_17$`CMC-1251`,
+          dfNew_1_factor_Excel_18$measure1,dfNew_1_factor_Excel_18$X__3,dfNew_1_factor_Excel_18$`CMC-1252`,
+          dfNew_1_factor_Excel_19$measure1,dfNew_1_factor_Excel_19$X__3,dfNew_1_factor_Excel_19$`CMC-1253`,
+          dfNew_1_factor_Excel_20$measure1,dfNew_1_factor_Excel_20$X__3,dfNew_1_factor_Excel_20$`CMC-1254`,
+          dfNew_1_factor_Excel_21$measure1,dfNew_1_factor_Excel_21$X__3,dfNew_1_factor_Excel_21$`CMC-1255`,
+          dfNew_1_factor_Excel_22$measure1,dfNew_1_factor_Excel_22$X__3,dfNew_1_factor_Excel_22$`CMC-1256`,
+          dfNew_1_factor_Excel_23$measure1,dfNew_1_factor_Excel_23$X__3,dfNew_1_factor_Excel_23$`CMC-1257`,
+          dfNew_1_factor_Excel_24$measure1,dfNew_1_factor_Excel_24$X__3,dfNew_1_factor_Excel_24$`CMC-1258`,
+          dfNew_1_factor_Excel_25$measure1,dfNew_1_factor_Excel_25$X__3,dfNew_1_factor_Excel_25$`CMC-1259`,
+          dfNew_1_factor_Excel_26$measure1,dfNew_1_factor_Excel_26$X__3,dfNew_1_factor_Excel_26$`CMC-1260`,
+          dfNew_1_factor_Excel_27$measure1,dfNew_1_factor_Excel_27$X__3,dfNew_1_factor_Excel_27$`CMC-1261`,
+          dfNew_1_factor_Excel_28$measure1,dfNew_1_factor_Excel_28$X__3,dfNew_1_factor_Excel_28$`CMC-1262`,
+          dfNew_1_factor_Excel_29$measure1,dfNew_1_factor_Excel_29$X__3,dfNew_1_factor_Excel_29$`CMC-1263`,
+          dfNew_1_factor_Excel_30$measure1,dfNew_1_factor_Excel_30$X__3,dfNew_1_factor_Excel_30$`CMC-1264`,
+          dfNew_1_factor_Excel_31$measure1,dfNew_1_factor_Excel_31$X__3,dfNew_1_factor_Excel_31$`CMC-1265`,
+          dfNew_1_factor_Excel_32$measure1,dfNew_1_factor_Excel_32$X__3,dfNew_1_factor_Excel_32$`CMC-1266`,
+          dfNew_1_factor_Excel_33$measure1,dfNew_1_factor_Excel_33$X__3,dfNew_1_factor_Excel_33$`CMC-1267`,
+          dfNew_1_factor_Excel_34$measure1,dfNew_1_factor_Excel_34$X__3,dfNew_1_factor_Excel_34$`CMC-1268`)
+
+
+vec1
+```
+
+```{r pressure, echo=FALSE}
+## Factor 2 - Aggregation
+vec2 <- c(dfNew_2_factor$measure1,dfNew_2_factor$X__3,dfNew_2_factor$`CMC-1235`,
+          dfNew_2_factor_Excel_2$measure1,dfNew_2_factor_Excel_2$X__3,dfNew_2_factor_Excel_2$`CMC-1236`,
+          dfNew_2_factor_Excel_3$measure1,dfNew_2_factor_Excel_3$X__3,dfNew_2_factor_Excel_3$`CMC-1237`,
+          dfNew_2_factor_Excel_4$measure1,dfNew_2_factor_Excel_4$X__3,dfNew_2_factor_Excel_4$`CMC-1238`,
+          dfNew_2_factor_Excel_5$measure1,dfNew_2_factor_Excel_5$X__3,dfNew_2_factor_Excel_5$`CMC-1239`,
+          dfNew_2_factor_Excel_6$measure1,dfNew_2_factor_Excel_6$X__3,dfNew_2_factor_Excel_6$`CMC-1240`,
+          dfNew_2_factor_Excel_7$measure1,dfNew_2_factor_Excel_7$X__3,dfNew_2_factor_Excel_7$`CMC-1241`,
+          dfNew_2_factor_Excel_8$measure1,dfNew_2_factor_Excel_8$X__3,dfNew_2_factor_Excel_8$`CMC-1242`,
+          dfNew_2_factor_Excel_9$measure1,dfNew_2_factor_Excel_9$X__3,dfNew_2_factor_Excel_9$`CMC-1243`,
+          dfNew_2_factor_Excel_10$measure1,dfNew_2_factor_Excel_10$X__3,dfNew_2_factor_Excel_10$`CMC-1244`,
+          dfNew_2_factor_Excel_11$measure1,dfNew_2_factor_Excel_11$X__3,dfNew_2_factor_Excel_11$`CMC-1245`,
+          dfNew_2_factor_Excel_12$measure1,dfNew_2_factor_Excel_12$X__3,dfNew_2_factor_Excel_12$`CMC-1246`,
+          dfNew_2_factor_Excel_13$measure1,dfNew_2_factor_Excel_13$X__3,dfNew_2_factor_Excel_13$`CMC-1247`,
+          dfNew_2_factor_Excel_14$measure1,dfNew_2_factor_Excel_14$X__3,dfNew_2_factor_Excel_14$`CMC-1248`,
+          dfNew_2_factor_Excel_15$measure1,dfNew_2_factor_Excel_15$X__3,dfNew_2_factor_Excel_15$`CMC-1249`,
+          dfNew_2_factor_Excel_16$measure1,dfNew_2_factor_Excel_16$X__3,dfNew_2_factor_Excel_16$`CMC-1250`,
+          dfNew_2_factor_Excel_17$measure1,dfNew_2_factor_Excel_17$X__3,dfNew_2_factor_Excel_17$`CMC-1251`,
+          dfNew_2_factor_Excel_18$measure1,dfNew_2_factor_Excel_18$X__3,dfNew_2_factor_Excel_18$`CMC-1252`,
+          dfNew_2_factor_Excel_19$measure1,dfNew_2_factor_Excel_19$X__3,dfNew_2_factor_Excel_19$`CMC-1253`,
+          dfNew_2_factor_Excel_20$measure1,dfNew_2_factor_Excel_20$X__3,dfNew_2_factor_Excel_20$`CMC-1254`,
+          dfNew_2_factor_Excel_21$measure1,dfNew_2_factor_Excel_21$X__3,dfNew_2_factor_Excel_21$`CMC-1255`,
+          dfNew_2_factor_Excel_22$measure1,dfNew_2_factor_Excel_22$X__3,dfNew_2_factor_Excel_22$`CMC-1256`,
+          dfNew_2_factor_Excel_23$measure1,dfNew_2_factor_Excel_23$X__3,dfNew_2_factor_Excel_23$`CMC-1257`,
+          dfNew_2_factor_Excel_24$measure1,dfNew_2_factor_Excel_24$X__3,dfNew_2_factor_Excel_24$`CMC-1258`,
+          dfNew_2_factor_Excel_25$measure1,dfNew_2_factor_Excel_25$X__3,dfNew_2_factor_Excel_25$`CMC-1259`,
+          dfNew_2_factor_Excel_26$measure1,dfNew_2_factor_Excel_26$X__3,dfNew_2_factor_Excel_26$`CMC-1260`,
+          dfNew_2_factor_Excel_27$measure1,dfNew_2_factor_Excel_27$X__3,dfNew_2_factor_Excel_27$`CMC-1261`,
+          dfNew_2_factor_Excel_28$measure1,dfNew_2_factor_Excel_28$X__3,dfNew_2_factor_Excel_28$`CMC-1262`,
+          dfNew_2_factor_Excel_29$measure1,dfNew_2_factor_Excel_29$X__3,dfNew_2_factor_Excel_29$`CMC-1263`,
+          dfNew_2_factor_Excel_30$measure1,dfNew_2_factor_Excel_30$X__3,dfNew_2_factor_Excel_30$`CMC-1264`,
+          dfNew_2_factor_Excel_31$measure1,dfNew_2_factor_Excel_31$X__3,dfNew_2_factor_Excel_31$`CMC-1265`,
+          dfNew_2_factor_Excel_32$measure1,dfNew_2_factor_Excel_32$X__3,dfNew_2_factor_Excel_32$`CMC-1266`,
+          dfNew_2_factor_Excel_33$measure1,dfNew_2_factor_Excel_33$X__3,dfNew_2_factor_Excel_33$`CMC-1267`,
+          dfNew_2_factor_Excel_34$measure1,dfNew_2_factor_Excel_34$X__3,dfNew_2_factor_Excel_34$`CMC-1268`)
+
+
+vec2
+```
+```{r pressure, echo=FALSE}
+## Factor 3 - Aggregation
+vec3 <- c(dfNew_3_factor$measure1,dfNew_3_factor$X__3,dfNew_3_factor$`CMC-1235`,
+          dfNew_3_factor_Excel_2$measure1,dfNew_3_factor_Excel_2$X__3,dfNew_3_factor_Excel_2$`CMC-1236`,
+          dfNew_3_factor_Excel_3$measure1,dfNew_3_factor_Excel_3$X__3,dfNew_3_factor_Excel_3$`CMC-1237`,
+          dfNew_3_factor_Excel_4$measure1,dfNew_3_factor_Excel_4$X__3,dfNew_3_factor_Excel_4$`CMC-1238`,
+          dfNew_3_factor_Excel_5$measure1,dfNew_3_factor_Excel_5$X__3,dfNew_3_factor_Excel_5$`CMC-1239`,
+          dfNew_3_factor_Excel_6$measure1,dfNew_3_factor_Excel_6$X__3,dfNew_3_factor_Excel_6$`CMC-1240`,
+          dfNew_3_factor_Excel_7$measure1,dfNew_3_factor_Excel_7$X__3,dfNew_3_factor_Excel_7$`CMC-1241`,
+          dfNew_3_factor_Excel_8$measure1,dfNew_3_factor_Excel_8$X__3,dfNew_3_factor_Excel_8$`CMC-1242`,
+          dfNew_3_factor_Excel_9$measure1,dfNew_3_factor_Excel_9$X__3,dfNew_3_factor_Excel_9$`CMC-1243`,
+          dfNew_3_factor_Excel_10$measure1,dfNew_3_factor_Excel_10$X__3,dfNew_3_factor_Excel_10$`CMC-1244`,
+          dfNew_3_factor_Excel_11$measure1,dfNew_3_factor_Excel_11$X__3,dfNew_3_factor_Excel_11$`CMC-1245`,
+          dfNew_3_factor_Excel_12$measure1,dfNew_3_factor_Excel_12$X__3,dfNew_3_factor_Excel_12$`CMC-1246`,
+          dfNew_3_factor_Excel_13$measure1,dfNew_3_factor_Excel_13$X__3,dfNew_3_factor_Excel_13$`CMC-1247`,
+          dfNew_3_factor_Excel_14$measure1,dfNew_3_factor_Excel_14$X__3,dfNew_3_factor_Excel_14$`CMC-1248`,
+          dfNew_3_factor_Excel_15$measure1,dfNew_3_factor_Excel_15$X__3,dfNew_3_factor_Excel_15$`CMC-1249`,
+          dfNew_3_factor_Excel_16$measure1,dfNew_3_factor_Excel_16$X__3,dfNew_3_factor_Excel_16$`CMC-1250`,
+          dfNew_3_factor_Excel_17$measure1,dfNew_3_factor_Excel_17$X__3,dfNew_3_factor_Excel_17$`CMC-1251`,
+          dfNew_3_factor_Excel_18$measure1,dfNew_3_factor_Excel_18$X__3,dfNew_3_factor_Excel_18$`CMC-1252`,
+          dfNew_3_factor_Excel_19$measure1,dfNew_3_factor_Excel_19$X__3,dfNew_3_factor_Excel_19$`CMC-1253`,
+          dfNew_3_factor_Excel_20$measure1,dfNew_3_factor_Excel_20$X__3,dfNew_3_factor_Excel_20$`CMC-1254`,
+          dfNew_3_factor_Excel_21$measure1,dfNew_3_factor_Excel_21$X__3,dfNew_3_factor_Excel_21$`CMC-1255`,
+          dfNew_3_factor_Excel_22$measure1,dfNew_3_factor_Excel_22$X__3,dfNew_3_factor_Excel_22$`CMC-1256`,
+          dfNew_3_factor_Excel_23$measure1,dfNew_3_factor_Excel_23$X__3,dfNew_3_factor_Excel_23$`CMC-1257`,
+          dfNew_3_factor_Excel_24$measure1,dfNew_3_factor_Excel_24$X__3,dfNew_3_factor_Excel_24$`CMC-1258`,
+          dfNew_3_factor_Excel_25$measure1,dfNew_3_factor_Excel_25$X__3,dfNew_3_factor_Excel_25$`CMC-1259`,
+          dfNew_3_factor_Excel_26$measure1,dfNew_3_factor_Excel_26$X__3,dfNew_3_factor_Excel_26$`CMC-1260`,
+          dfNew_3_factor_Excel_27$measure1,dfNew_3_factor_Excel_27$X__3,dfNew_3_factor_Excel_27$`CMC-1261`,
+          dfNew_3_factor_Excel_28$measure1,dfNew_3_factor_Excel_28$X__3,dfNew_3_factor_Excel_28$`CMC-1262`,
+          dfNew_3_factor_Excel_29$measure1,dfNew_3_factor_Excel_29$X__3,dfNew_3_factor_Excel_29$`CMC-1263`,
+          dfNew_3_factor_Excel_30$measure1,dfNew_3_factor_Excel_30$X__3,dfNew_3_factor_Excel_30$`CMC-1264`,
+          dfNew_3_factor_Excel_31$measure1,dfNew_3_factor_Excel_31$X__3,dfNew_3_factor_Excel_31$`CMC-1265`,
+          dfNew_3_factor_Excel_32$measure1,dfNew_3_factor_Excel_32$X__3,dfNew_3_factor_Excel_32$`CMC-1266`,
+          dfNew_3_factor_Excel_33$measure1,dfNew_3_factor_Excel_33$X__3,dfNew_3_factor_Excel_33$`CMC-1267`,
+          dfNew_3_factor_Excel_34$measure1,dfNew_3_factor_Excel_34$X__3,dfNew_3_factor_Excel_34$`CMC-1268`)
+
+
+vec3
+```
+
+```{r pressure, echo=FALSE}
+## Factor 4 - Aggregation
+vec4 <- c(dfNew_4_factor$measure1,dfNew_4_factor$X__3,dfNew_4_factor$`CMC-1235`,
+          dfNew_4_factor_Excel_2$measure1,dfNew_4_factor_Excel_2$X__3,dfNew_4_factor_Excel_2$`CMC-1236`,
+          dfNew_4_factor_Excel_3$measure1,dfNew_4_factor_Excel_3$X__3,dfNew_4_factor_Excel_3$`CMC-1237`,
+          dfNew_4_factor_Excel_4$measure1,dfNew_4_factor_Excel_4$X__3,dfNew_4_factor_Excel_4$`CMC-1238`,
+          dfNew_4_factor_Excel_5$measure1,dfNew_4_factor_Excel_5$X__3,dfNew_4_factor_Excel_5$`CMC-1239`,
+          dfNew_4_factor_Excel_6$measure1,dfNew_4_factor_Excel_6$X__3,dfNew_4_factor_Excel_6$`CMC-1240`,
+          dfNew_4_factor_Excel_7$measure1,dfNew_4_factor_Excel_7$X__3,dfNew_4_factor_Excel_7$`CMC-1241`,
+          dfNew_4_factor_Excel_8$measure1,dfNew_4_factor_Excel_8$X__3,dfNew_4_factor_Excel_8$`CMC-1242`,
+          dfNew_4_factor_Excel_9$measure1,dfNew_4_factor_Excel_9$X__3,dfNew_4_factor_Excel_9$`CMC-1243`,
+          dfNew_4_factor_Excel_10$measure1,dfNew_4_factor_Excel_10$X__3,dfNew_4_factor_Excel_10$`CMC-1244`,
+          dfNew_4_factor_Excel_11$measure1,dfNew_4_factor_Excel_11$X__3,dfNew_4_factor_Excel_11$`CMC-1245`,
+          dfNew_4_factor_Excel_12$measure1,dfNew_4_factor_Excel_12$X__3,dfNew_4_factor_Excel_12$`CMC-1246`,
+          dfNew_4_factor_Excel_13$measure1,dfNew_4_factor_Excel_13$X__3,dfNew_4_factor_Excel_13$`CMC-1247`,
+          dfNew_4_factor_Excel_14$measure1,dfNew_4_factor_Excel_14$X__3,dfNew_4_factor_Excel_14$`CMC-1248`,
+          dfNew_4_factor_Excel_15$measure1,dfNew_4_factor_Excel_15$X__3,dfNew_4_factor_Excel_15$`CMC-1249`,
+          dfNew_4_factor_Excel_16$measure1,dfNew_4_factor_Excel_16$X__3,dfNew_4_factor_Excel_16$`CMC-1250`,
+          dfNew_4_factor_Excel_17$measure1,dfNew_4_factor_Excel_17$X__3,dfNew_4_factor_Excel_17$`CMC-1251`,
+          dfNew_4_factor_Excel_18$measure1,dfNew_4_factor_Excel_18$X__3,dfNew_4_factor_Excel_18$`CMC-1252`,
+          dfNew_4_factor_Excel_19$measure1,dfNew_4_factor_Excel_19$X__3,dfNew_4_factor_Excel_19$`CMC-1253`,
+          dfNew_4_factor_Excel_20$measure1,dfNew_4_factor_Excel_20$X__3,dfNew_4_factor_Excel_20$`CMC-1254`,
+          dfNew_4_factor_Excel_21$measure1,dfNew_4_factor_Excel_21$X__3,dfNew_4_factor_Excel_21$`CMC-1255`,
+          dfNew_4_factor_Excel_22$measure1,dfNew_4_factor_Excel_22$X__3,dfNew_4_factor_Excel_22$`CMC-1256`,
+          dfNew_4_factor_Excel_23$measure1,dfNew_4_factor_Excel_23$X__3,dfNew_4_factor_Excel_23$`CMC-1257`,
+          dfNew_4_factor_Excel_24$measure1,dfNew_4_factor_Excel_24$X__3,dfNew_4_factor_Excel_24$`CMC-1258`,
+          dfNew_4_factor_Excel_25$measure1,dfNew_4_factor_Excel_25$X__3,dfNew_4_factor_Excel_25$`CMC-1259`,
+          dfNew_4_factor_Excel_26$measure1,dfNew_4_factor_Excel_26$X__3,dfNew_4_factor_Excel_26$`CMC-1260`,
+          dfNew_4_factor_Excel_27$measure1,dfNew_4_factor_Excel_27$X__3,dfNew_4_factor_Excel_27$`CMC-1261`,
+          dfNew_4_factor_Excel_28$measure1,dfNew_4_factor_Excel_28$X__3,dfNew_4_factor_Excel_28$`CMC-1262`,
+          dfNew_4_factor_Excel_29$measure1,dfNew_4_factor_Excel_29$X__3,dfNew_4_factor_Excel_29$`CMC-1263`,
+          dfNew_4_factor_Excel_30$measure1,dfNew_4_factor_Excel_30$X__3,dfNew_4_factor_Excel_30$`CMC-1264`,
+          dfNew_4_factor_Excel_31$measure1,dfNew_4_factor_Excel_31$X__3,dfNew_4_factor_Excel_31$`CMC-1265`,
+          dfNew_4_factor_Excel_32$measure1,dfNew_4_factor_Excel_32$X__3,dfNew_4_factor_Excel_32$`CMC-1266`,
+          dfNew_4_factor_Excel_33$measure1,dfNew_4_factor_Excel_33$X__3,dfNew_4_factor_Excel_33$`CMC-1267`,
+          dfNew_4_factor_Excel_34$measure1,dfNew_4_factor_Excel_34$X__3,dfNew_4_factor_Excel_34$`CMC-1268`)
+
+
+vec4
+```
+
+```{r pressure, echo=FALSE}
+## Factor 5 - Aggregation
+vec5 <- c(dfNew_5_factor$measure1,dfNew_5_factor$X__3,dfNew_4_factor$`CMC-1235`,
+          dfNew_5_factor_Excel_2$measure1,dfNew_5_factor_Excel_2$X__3,dfNew_5_factor_Excel_2$`CMC-1236`,
+          dfNew_5_factor_Excel_3$measure1,dfNew_5_factor_Excel_3$X__3,dfNew_5_factor_Excel_3$`CMC-1237`,
+          dfNew_5_factor_Excel_4$measure1,dfNew_5_factor_Excel_4$X__3,dfNew_5_factor_Excel_4$`CMC-1238`,
+          dfNew_5_factor_Excel_5$measure1,dfNew_5_factor_Excel_5$X__3,dfNew_5_factor_Excel_5$`CMC-1239`,
+          dfNew_5_factor_Excel_6$measure1,dfNew_5_factor_Excel_6$X__3,dfNew_5_factor_Excel_6$`CMC-1240`,
+          dfNew_5_factor_Excel_7$measure1,dfNew_5_factor_Excel_7$X__3,dfNew_5_factor_Excel_7$`CMC-1241`,
+          dfNew_5_factor_Excel_8$measure1,dfNew_5_factor_Excel_8$X__3,dfNew_5_factor_Excel_8$`CMC-1242`,
+          dfNew_5_factor_Excel_9$measure1,dfNew_5_factor_Excel_9$X__3,dfNew_5_factor_Excel_9$`CMC-1243`,
+          dfNew_5_factor_Excel_10$measure1,dfNew_5_factor_Excel_10$X__3,dfNew_5_factor_Excel_10$`CMC-1244`,
+          dfNew_5_factor_Excel_11$measure1,dfNew_5_factor_Excel_11$X__3,dfNew_5_factor_Excel_11$`CMC-1245`,
+          dfNew_5_factor_Excel_12$measure1,dfNew_5_factor_Excel_12$X__3,dfNew_5_factor_Excel_12$`CMC-1246`,
+          dfNew_5_factor_Excel_13$measure1,dfNew_5_factor_Excel_13$X__3,dfNew_5_factor_Excel_13$`CMC-1247`,
+          dfNew_5_factor_Excel_14$measure1,dfNew_5_factor_Excel_14$X__3,dfNew_5_factor_Excel_14$`CMC-1248`,
+          dfNew_5_factor_Excel_15$measure1,dfNew_5_factor_Excel_15$X__3,dfNew_5_factor_Excel_15$`CMC-1249`,
+          dfNew_5_factor_Excel_16$measure1,dfNew_5_factor_Excel_16$X__3,dfNew_5_factor_Excel_16$`CMC-1250`,
+          dfNew_5_factor_Excel_17$measure1,dfNew_5_factor_Excel_17$X__3,dfNew_5_factor_Excel_17$`CMC-1251`,
+          dfNew_5_factor_Excel_18$measure1,dfNew_5_factor_Excel_18$X__3,dfNew_5_factor_Excel_18$`CMC-1252`,
+          dfNew_5_factor_Excel_19$measure1,dfNew_5_factor_Excel_19$X__3,dfNew_5_factor_Excel_19$`CMC-1253`,
+          dfNew_5_factor_Excel_20$measure1,dfNew_5_factor_Excel_20$X__3,dfNew_5_factor_Excel_20$`CMC-1254`,
+          dfNew_5_factor_Excel_21$measure1,dfNew_5_factor_Excel_21$X__3,dfNew_5_factor_Excel_21$`CMC-1255`,
+          dfNew_5_factor_Excel_22$measure1,dfNew_5_factor_Excel_22$X__3,dfNew_5_factor_Excel_22$`CMC-1256`,
+          dfNew_5_factor_Excel_23$measure1,dfNew_5_factor_Excel_23$X__3,dfNew_5_factor_Excel_23$`CMC-1257`,
+          dfNew_5_factor_Excel_24$measure1,dfNew_5_factor_Excel_24$X__3,dfNew_5_factor_Excel_24$`CMC-1258`,
+          dfNew_5_factor_Excel_25$measure1,dfNew_5_factor_Excel_25$X__3,dfNew_5_factor_Excel_25$`CMC-1259`,
+          dfNew_5_factor_Excel_26$measure1,dfNew_5_factor_Excel_26$X__3,dfNew_5_factor_Excel_26$`CMC-1260`,
+          dfNew_5_factor_Excel_27$measure1,dfNew_5_factor_Excel_27$X__3,dfNew_5_factor_Excel_27$`CMC-1261`,
+          dfNew_5_factor_Excel_28$measure1,dfNew_5_factor_Excel_28$X__3,dfNew_5_factor_Excel_28$`CMC-1262`,
+          dfNew_5_factor_Excel_29$measure1,dfNew_5_factor_Excel_29$X__3,dfNew_5_factor_Excel_29$`CMC-1263`,
+          dfNew_5_factor_Excel_30$measure1,dfNew_5_factor_Excel_30$X__3,dfNew_5_factor_Excel_30$`CMC-1264`,
+          dfNew_5_factor_Excel_31$measure1,dfNew_5_factor_Excel_31$X__3,dfNew_5_factor_Excel_31$`CMC-1265`,
+          dfNew_5_factor_Excel_32$measure1,dfNew_5_factor_Excel_32$X__3,dfNew_5_factor_Excel_32$`CMC-1266`,
+          dfNew_5_factor_Excel_33$measure1,dfNew_5_factor_Excel_33$X__3,dfNew_5_factor_Excel_33$`CMC-1267`,
+          dfNew_5_factor_Excel_34$measure1,dfNew_5_factor_Excel_34$X__3,dfNew_5_factor_Excel_34$`CMC-1268`)
+
+
+vec5
+```
+
+
+```{r pressure, echo=FALSE}
+## Factor 5 - Aggregation
+vec6 <- c(dfNew_ME_factor$measure1,dfNew_ME_factor$X__3,dfNew_ME_factor$`CMC-1235`,
+          dfNew_ME_factor_Excel_2$measure1,dfNew_ME_factor_Excel_2$X__3,dfNew_ME_factor_Excel_2$`CMC-1236`,
+          dfNew_ME_factor_Excel_3$measure1,dfNew_ME_factor_Excel_3$X__3,dfNew_ME_factor_Excel_3$`CMC-1237`,
+          dfNew_ME_factor_Excel_4$measure1,dfNew_ME_factor_Excel_4$X__3,dfNew_ME_factor_Excel_4$`CMC-1238`,
+          dfNew_ME_factor_Excel_5$measure1,dfNew_ME_factor_Excel_5$X__3,dfNew_ME_factor_Excel_5$`CMC-1239`,
+          dfNew_ME_factor_Excel_6$measure1,dfNew_ME_factor_Excel_6$X__3,dfNew_ME_factor_Excel_6$`CMC-1240`,
+          dfNew_ME_factor_Excel_7$measure1,dfNew_ME_factor_Excel_7$X__3,dfNew_ME_factor_Excel_7$`CMC-1241`,
+          dfNew_ME_factor_Excel_8$measure1,dfNew_ME_factor_Excel_8$X__3,dfNew_ME_factor_Excel_8$`CMC-1242`,
+          dfNew_ME_factor_Excel_9$measure1,dfNew_ME_factor_Excel_9$X__3,dfNew_ME_factor_Excel_9$`CMC-1243`,
+          dfNew_ME_factor_Excel_10$measure1,dfNew_ME_factor_Excel_10$X__3,dfNew_ME_factor_Excel_10$`CMC-1244`,
+          dfNew_ME_factor_Excel_11$measure1,dfNew_ME_factor_Excel_11$X__3,dfNew_ME_factor_Excel_11$`CMC-1245`,
+          dfNew_ME_factor_Excel_12$measure1,dfNew_ME_factor_Excel_12$X__3,dfNew_ME_factor_Excel_12$`CMC-1246`,
+          dfNew_ME_factor_Excel_13$measure1,dfNew_ME_factor_Excel_13$X__3,dfNew_ME_factor_Excel_13$`CMC-1247`,
+          dfNew_ME_factor_Excel_14$measure1,dfNew_ME_factor_Excel_14$X__3,dfNew_ME_factor_Excel_14$`CMC-1248`,
+          dfNew_ME_factor_Excel_15$measure1,dfNew_ME_factor_Excel_15$X__3,dfNew_ME_factor_Excel_15$`CMC-1249`,
+          dfNew_ME_factor_Excel_16$measure1,dfNew_ME_factor_Excel_16$X__3,dfNew_ME_factor_Excel_16$`CMC-1250`,
+          dfNew_ME_factor_Excel_17$measure1,dfNew_ME_factor_Excel_17$X__3,dfNew_ME_factor_Excel_17$`CMC-1251`,
+          dfNew_ME_factor_Excel_18$measure1,dfNew_ME_factor_Excel_18$X__3,dfNew_ME_factor_Excel_18$`CMC-1252`,
+          dfNew_ME_factor_Excel_19$measure1,dfNew_ME_factor_Excel_19$X__3,dfNew_ME_factor_Excel_19$`CMC-1253`,
+          dfNew_ME_factor_Excel_20$measure1,dfNew_ME_factor_Excel_20$X__3,dfNew_ME_factor_Excel_20$`CMC-1254`,
+          dfNew_ME_factor_Excel_21$measure1,dfNew_ME_factor_Excel_21$X__3,dfNew_ME_factor_Excel_21$`CMC-1255`,
+          dfNew_ME_factor_Excel_22$measure1,dfNew_ME_factor_Excel_22$X__3,dfNew_ME_factor_Excel_22$`CMC-1256`,
+          dfNew_ME_factor_Excel_23$measure1,dfNew_ME_factor_Excel_23$X__3,dfNew_ME_factor_Excel_23$`CMC-1257`,
+          dfNew_ME_factor_Excel_24$measure1,dfNew_ME_factor_Excel_24$X__3,dfNew_ME_factor_Excel_24$`CMC-1258`,
+          dfNew_ME_factor_Excel_25$measure1,dfNew_ME_factor_Excel_25$X__3,dfNew_ME_factor_Excel_25$`CMC-1259`,
+          dfNew_ME_factor_Excel_26$measure1,dfNew_ME_factor_Excel_26$X__3,dfNew_ME_factor_Excel_26$`CMC-1260`,
+          dfNew_ME_factor_Excel_27$measure1,dfNew_ME_factor_Excel_27$X__3,dfNew_ME_factor_Excel_27$`CMC-1261`,
+          dfNew_ME_factor_Excel_28$measure1,dfNew_ME_factor_Excel_28$X__3,dfNew_ME_factor_Excel_28$`CMC-1262`,
+          dfNew_ME_factor_Excel_29$measure1,dfNew_ME_factor_Excel_29$X__3,dfNew_ME_factor_Excel_29$`CMC-1263`,
+          dfNew_ME_factor_Excel_30$measure1,dfNew_ME_factor_Excel_30$X__3,dfNew_ME_factor_Excel_30$`CMC-1264`,
+          dfNew_ME_factor_Excel_31$measure1,dfNew_ME_factor_Excel_31$X__3,dfNew_ME_factor_Excel_31$`CMC-1265`,
+          dfNew_ME_factor_Excel_32$measure1,dfNew_ME_factor_Excel_32$X__3,dfNew_ME_factor_Excel_32$`CMC-1266`,
+          dfNew_ME_factor_Excel_33$measure1,dfNew_ME_factor_Excel_33$X__3,dfNew_ME_factor_Excel_33$`CMC-1267`,
+          dfNew_ME_factor_Excel_34$measure1,dfNew_ME_factor_Excel_34$X__3,dfNew_ME_factor_Excel_34$`CMC-1268`)
+
+vec6
+```
+
+```{r pressure, echo=FALSE}
+x <- data.frame(y=vec6,x1=vec1, x2=vec2, x3=vec3 , x4 = vec4 , x5 = vec5)
+x
+str(x)
+#education_data1$scores_research_rank <-suppressWarnings(as.numeric(education_data1$scores_research_rank))
+
+for (i in 1:6) {
+cols = c(i);    
+x[,cols]<-as.numeric(levels(x[,cols])[x[,cols]])
+}
+
+str(x)
+```
+
+```{r pressure, echo=FALSE}
+cor(x)
+```
+
+```{r pressure, echo=FALSE}
+fit <- lm(y ~ x1 + x2 + x3 + x4 +x5, data=x )
+summary(fit)
+```
+
+```{r pressure, echo=FALSE}
+coefficients(fit) # model coefficients
+```
+
+```{r pressure, echo=FALSE}
+fit <- lm(y ~ x1 + x3 + x4 +x5, data=x )
+summary(fit)
+```
+
+```{r pressure, echo=FALSE}
+anova(fit) # anova table 
+
+fit1 <- lm(y ~ x1 + x2 + x3 + x4, data=x)
+fit2 <- lm(y ~ x1 + x3,data = x)
+anova(fit1, fit2)
+```
+
+```{r pressure, echo=FALSE}
+#(after regression fit and fit1 values keep same.)
+## First Version and Second Factor Removed
+fit <- lm(y ~ x1 + x2 + x3 + x4 + x5, data=x)
+fit1 <- lm(y ~ x1 + x3 + x4+ x5, data=x)
+summary(fit)
+summary(fit1)
+#Adjusted R - Squared(Düzeltilmiş R Kare)
+#fit ->0.9415
+#fit1 -> 0.9415
+
+coefficients(fit) # model coefficients
+
+## First Excel Values
+Y <- 4.142910 + 0.013639 * 51.41 + -0.085218*30 + -0.046446*23.9 + 0.319148*15.29
+Y
+
+## 2-4 Factor Removed
+fit_l <- lm(y ~ x1 + x3 + x5, data=x)
+summary(fit_l)
+y_last <- 3.899548 + (-0.002733 * 51.41) + (-0.085691*30) + (0.320258*15.29)
+print("Y Last")
+y_last
+
+#Adjusted R - Squared(Düzeltilmiş R Kare)
+#fit ->0.9417
+
+#Residual Standart Error - Error Rate 
+#In our multiple regression example, the RSE is 0.3643 corresponding to 8.299% error rate.
+print(sigma(fit)/mean(x$y))  #0.08299876 -- %8.299
+#In our multiple regression example, the RSE is 0.3643 corresponding to 8.299% error rate.
+print(sigma(fit1)/mean(x$y)) #0.08284128
+#In our multiple regression example, the RSE is 0.3636 corresponding to 8.284% error rate.
+print(sigma(fit_l)/mean(x$y))
+```
+```{r pressure, echo=FALSE}
+
+## Removed 1,2,4 factor
+fit1_without <- lm(y ~ x3 + x5, data=x)
+summary(fit1_without)
+coefficients(fit1_without) # model coefficients
+
+y_last <-  3.761437  + (-0.085714*30) + (0.320172*15.29)
+## LAST VALUE
+print("Last Value : ")
+y_last
+
+
+## Last Residual Standart Error
+#Residual Standart Error - Error Rate 
+#In our multiple regression example, the RSE is 0.3643 corresponding to 8.299% error rate.
+print(sigma(fit)/mean(x$y))  #0.08299876 -- %8.299
+#In our multiple regression example, the RSE is 0.3643 corresponding to 8.299% error rate.
+print(sigma(fit1)/mean(x$y)) #0.08284128
+#In our multiple regression example, the RSE is 0.3636 corresponding to 8.284% error rate.
+print(sigma(fit_l)/mean(x$y))
+#In our multiple regression example, the RSE is 0.3617 corresponding to 8.2824% error rate.
+print(sigma(fit1_without)/mean(x$y)) # 0.08242269
+```
+
+```{r pressure, echo=FALSE}
+
+library(GGally)
+library(ggpubr)
+
+migration_data <- x
+
+cor(migration_data)
+ggpairs(migration_data,title = "Correlation Matrix")+theme_bw()
+#ggcorr(migration_data , method = c("everything", "pearson"),name="Correlation",label=TRUE)
+
+res_x4 <- cor.test(migration_data$y, migration_data$x4,
+                   method = "pearson")
+res_x4#p-value = 0.1771 p_Value larger than 0.05
+#Correlation coefficient -> -0.1347025 
+
+res_x1 <- cor.test(migration_data$y, migration_data$x1,
+                   method = "pearson")
+res_x1 #p-value = p-value = 0.0888 p_Value larger than 0.05. 
+#Correlation coefficient -> 0.1693695 
+
+res_x2 <- cor.test(migration_data$y, migration_data$x2,
+                   method = "pearson")
+res_x2#p-value = NA
+
+res_x3 <- cor.test(migration_data$y, migration_data$x3,
+                   method = "pearson")
+res_x3#p-value = 0.0002552 p_Value less than 0.05
+# We can conclude that y and x3 are significantly correlated with a correlation coefficient of -0.3546228  and p-value of 0.0002552 .
+
+res_x5 <- cor.test(migration_data$y, migration_data$x5,
+                   method = "pearson")
+res_x5#p-value = p-value < 2.2e-16 p_Value larger than 0.05
+# We can conclude that y and x3 are significantly correlated with a correlation coefficient of 0.9126467 and p-value of 2.2e-16 .
+
+```
+
+```{r pressure, echo=FALSE}
+Y <- 4.142910 + 0.013639 * 51.41 + -0.085218*30 + -0.046446*23.9 + 0.319148*15.29
+Y
+```
